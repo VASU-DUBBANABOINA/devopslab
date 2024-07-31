@@ -1,0 +1,30 @@
+Docker commands for caluculator
+
+docker login
+
+docker build -t img .
+
+docker build -d -p 8080:80 img
+
+
+Docker commands in terminal
+
+docker login
+
+docker pull ubuntu
+
+docker push ubuntu
+
+docker start  container id 
+
+docker stop  container id
+
+docker run img id 
+
+docker ps
+
+docker ps -a
+
+docker rm
+
+docker rmi
