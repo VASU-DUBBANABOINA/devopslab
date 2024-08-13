@@ -32,33 +32,12 @@ index.html
 
 
 PHP
-<html>
-    <body>
-        welcome<br>
-        your name is:
-        <?php
-        echo $_POST['name'];
-        ?><br>
-
-        your password is:
-        <?php
-        echo $_POST['password'];
-        ?><br>
-
-        your email is:
-        <?php
-        echo $_POST['email'];
-        ?><br>
-
-        your gender is:
-        <?php
-        echo $_POST['gender'];
-        ?><br>
-        
-        Selected Languages:<br>
-    <?php
-    $languages = $_POST['languages'] ?? [];
-    echo $languages ? implode('<br>', array_map('htmlspecialchars', $languages)) : 'No languages selected.';
-    ?>
-    </body>
-</html>
+<?php
+echo "Your name: " . $_POST["n"] . "<br>";
+echo "Your password: " . $_POST["pass"] . "<br>";
+echo "Your email: " . $_POST["email"] . "<br>";
+echo "Languages you know: <br>";
+foreach($_POST["language"] as $lang) {
+    echo $lang . "<br>";
+}
+?>
