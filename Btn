@@ -1,0 +1,42 @@
+[13/08, 11:54 pm] Nithin Csm: <html>
+<body>
+    
+<button  onclick="showAlert()">Click me</button>
+   
+    <script>
+        function showAlert(){
+            alert("Button Clicked");
+        }
+    </script>
+</body>
+</html>
+[13/08, 11:54 pm] Nithin Csm: package seleniumPro;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 ChromeDriver driver =new ChromeDriver();
+		 try {
+	            driver.get("file:///E:/Eclipse_Space/index.html");
+
+	            WebElement button = driver.findElement(By.tagName("button"));
+	            button.click();
+//
+	            driver.switchTo().alert().accept();
+
+	            System.out.println("Test passed!");
+
+	        } catch (Exception e) {
+	            System.out.println("Test failed!");
+	        } 
+		 finally {
+			 driver.quit();
+		 }
+		 
+
+	}
+
+}
